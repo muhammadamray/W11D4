@@ -20,8 +20,8 @@ class Move < ApplicationRecord
 
 
     has_many :pokemon,
-    through :poke_moves,
-    source :pokemon,
+    through: :poke_moves,
+    source: :pokemon
     
 
 end

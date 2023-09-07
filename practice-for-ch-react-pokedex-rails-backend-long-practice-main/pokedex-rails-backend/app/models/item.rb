@@ -17,5 +17,5 @@ class Item < ApplicationRecord
     validates :price, numericality: {minimum: 0}
     validates :name, length: { in: 3..255 }
 
-
+    belongs_to :pokemon
 end
