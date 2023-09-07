@@ -9,4 +9,13 @@
 #  updated_at :datetime         not null
 #
 class PokeMove < ApplicationRecord
+
+    validates :pokemon_id, :move_id, presence: true
+
+
+    belongs_to :pokemon
+    
+    belongs_to :move
+
+
 end

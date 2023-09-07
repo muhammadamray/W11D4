@@ -8,4 +8,12 @@
 #  updated_at :datetime         not null
 #
 class Move < ApplicationRecord
+
+    validates :name, presence: true
+    validates :name, length: { in: 3..255 }
+    validates :name, uniqueness: { message: "'%{value}' is already in use" }
+
+
+    has_many
+
 end
